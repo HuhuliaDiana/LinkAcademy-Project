@@ -1,0 +1,107 @@
+body {
+background-image: url("/blue.jpg");
+background-size: 100%;
+}
+
+.btns{
+border-radius: 8px;
+background-color: rgb(176,196,222);
+width: 150px;
+height: 50px;
+color: rgb(0,0,139);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 150%;
+border: 2px solid rgb(176,224,230);
+margin-right: 30px;
+display: table-cell;
+float: right;
+text-align: center;
+
+
+}
+
+.logo_btns{
+width: 90%;
+display: table;
+margin-top: 40px;
+margin-left: 10%;
+}
+
+.logo{
+display: table-cell;
+color: rgb(173,216,230);
+font-style: italic;
+font-size: 400%;
+font-weight: 300;
+}
+
+.form{
+display: table-cell;
+width: 80%;
+}
+
+
+.form-group{
+margin-left: 40%;
+font-size: 150%;
+color: rgb(173,216,230);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.form-control{
+width: 200px;
+border-radius: 8px;
+background-color: rgb(211,211,211);
+border: 2px solid rgb(176,224,230);
+}
+
+.form_group_control{
+margin-top: 15px;
+}
+
+.elements_send_order{
+color: rgb(173,216,230);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 120%;
+}
+
+.btn-finish-order, .btn_backMenu{
+margin-top: 20px;
+font-size: 100%;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+color: rgb(25,25,112);
+border-radius: 8px;
+width: 100%;
+
+}
+.btn_backMenu{
+background-color: #FAEBD7;
+
+
+}
+.btn-finish-order{
+background-color: rgb(173,216,230);
+height: 30px;
+
+}
+
+.send_order{
+display: table-cell;
+margin-right: 30%;
+float: right;
+width: 20%;
+margin-top: 20px;
+}
+
+.form_sendOrder{
+display: table;
+display: flex;
+margin-top: 70px;
+}
+
+.lei{
+color: rgb(173,216,230);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 120%;
+}
+

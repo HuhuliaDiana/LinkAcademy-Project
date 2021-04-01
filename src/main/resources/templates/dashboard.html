@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WiseCell | Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3080/dashboard.css"/>
+
+</head>
+<body>
+<div class="logo_btns">
+<h1 class="logo">WiseCell</h1>
+<div class="btns_seeCartSignOut">
+    <form method="post" action="/go-to-cart">
+        <button class="btns" id="btn_cart">Coș de cumpărături</button>
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+    </form>
+<form method="post" action="/sign-out">
+    <button class="btns">Ieșire</button>
+    <input type="number" name="user_id" th:value="${user_id}" hidden>
+
+</form>
+</div>
+</div>
+
+
+<div class="filters">
+    <select class="formChoice" id="formChoicePrice" name="formChoicePrice">
+        <option value="" hidden>Sortează după preț</option>
+        <option value="decreasing-price">Descrescător</option>
+        <option value="rising-price">Crescător</option>
+    </select>
+    <select class="formChoice" id="formChoiceBrand" name="formChoiceBrand">
+        <option value="" hidden>Producător</option>
+        <option value="type-samsung">SAMSUNG</option>
+        <option value="type-huawei">HUAWEI</option>
+        <option value="type-xiaomi">XIAOMI</option>
+        <option value="type-lenovo">LENOVO</option>
+        <option value="type-asus">ASUS</option>
+    </select>
+    <select class="formChoice" id="formChoiceMemRAM" name="formChoiceMemRAM">
+        <option value="" hidden>Memorie RAM</option>
+        <option value="6GB">6GB</option>
+        <option value="8GB">8GB</option>
+        <option value="12GB">12GB</option>
+        <option value="16GB">16GB</option>
+
+    </select>
+    <form action="/apply-filters" method ="post">
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+        <input type="text" name="btnPrice" th:value="${btnPrice}" hidden>
+        <input type="text" name="btnMemRAM" th:value="${btnMemRAM}" hidden>
+        <input type="text" name="btnBrand" th:value="${btnBrand}" hidden>
+
+        <button class="btns_filters" name="applyFilters">Applică filtrele</button>
+    </form>
+
+<form method="post" action="/back-to-dashboard">
+    <button class="btns_filters">Pagina principală</button>
+    <input type="number" name="user_id" th:value="${user_id}" hidden>
+</form>
+</div>
+
+<div id="div_input_filters">
+    <span th:text="${input_btnPrice}+' | '" class="input_filters" name="input_filters"></span>
+    <span th:text="${btnBrand}+' | '" class="input_filters" name="input_filters"></span>
+    <span th:text="${btnMemRAM}+' | '" class="input_filters" name="input_filters"></span>
+</div>
+<input type="number" name="numberCartProducts" id="numberCartProducts" th:value="${numberCartProducts}">
+
+
+<script type="text/javascript" src="http://localhost:3080/dashboard_filters.js"></script>
+
+
+<div class="div_products">
+<div class="products" th:each="p: ${products}">
+    <img class="photos" th:src="'/'+${p.photo}" src=""/>
+    <p th:text="'Brand: '+${p.brand}"></p>
+    <p  th:text="'Model: '+${p.model}"></p>
+    <p  th:text="'Diagonala: '+${p.diagonal}"></p>
+    <p th:text="'Retea: '+${p.internet_speed}"></p>
+    <p  th:text="'Memorie RAM: '+${p.memory_RAM}"></p>
+    <p  th:text="'Baterie: '+${p.battery_capacity}"></p>
+    <p  th:text="'Camera: '+${p.main_camera}"></p>
+    <p  th:text="'Pret: '+${p.price}+' lei'"></p>
+
+
+    <form action="/dashboard/buy" method="post">
+        <input type="number" name="id" th:value="${p.id}" hidden>
+        <input type="number" name="nrComanda" th:value="${nrComanda}" hidden>
+        <input type="number" name="quantity" th:value="${p.quantity}" hidden>
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+        <input type="text" name="btnPrice" th:value="${btnPrice}" hidden>
+        <input type="text" name="btnBrand" th:value="${btnBrand}" hidden>
+        <input type="text" name="btnMemRAM" th:value="${btnMemRAM}" hidden>
+
+
+        <div class="prod_dispon" name="produsDisponibil"></div>
+        <button id="button" name="button">Adaugă în coș</button>
+    </form>
+
+    <script type="text/javascript" src="http://localhost:3080/dashboard_disableBtns.js"></script>
+
+</div>
+</div>
+
+
+</body>
+</html>

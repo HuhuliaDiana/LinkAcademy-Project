@@ -1,0 +1,40 @@
+body {
+background-image: url("/first_page.jpg");
+background-size: 100%;
+}
+
+#button_user, #button_admin {
+border-radius: 8px;
+background-color: rgb(128,128,128,0.3);
+color: rgb(240,248,255,0.6);
+padding: 5px;
+height: 60px;
+width: 250px;
+font-size: 120%;
+margin-left: 18%;
+
+}
+
+.logo{
+color: rgb(173,216,230);
+margin-top: 15%;
+margin-left: 15%;
+font-style: italic;
+font-size: 300%;
+font-weight: 200;
+
+}
+
+.motto{
+color: rgb(173,216,230);
+margin-left: 12%;
+font: normal bold 12px/30px Georgia, serif;
+font-size: 100%;
+}
+.div2{
+line-height:10px;
+}
+.div1{
+margin-top:20%;
+line-height:100px;
+}

@@ -1,0 +1,42 @@
+body {
+background-image: url("/blue.jpg");
+background-size: 100%;
+}
+
+h1{
+text-align: center;
+color: 	rgb(173,216,230);
+margin-top: 15%;
+font-size: 250%;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+
+.btn_signOut, .btn_backMenu{
+border-radius: 8px;
+color: rgb(0,0,139);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 150%;
+display: flex;
+border: 2px solid rgb(176,224,230);
+margin: auto;
+display: inline;
+}
+
+.btn_signOut{
+background-color: rgb(176,196,222);
+width: 180px;
+
+}
+.btn_backMenu{
+background-color: #FAEBD7;
+width: 250px;
+margin-left: 20px;
+}
+
+.btns{
+display: flex;
+position: absolute;
+left: 35%;
+
+}

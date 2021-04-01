@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WiseCell | Shop cart</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3080/cart.css"/>
+
+</head>
+<body>
+<div class="logo_btns">
+    <h1 class="logo">WiseCell</h1>
+        <form method="post" action="/sign-out">
+            <button class="btn_signOut">Ieșire</button>
+            <input type="number" name="user_id" th:value="${user_id}" hidden>
+        </form>
+</div>
+
+<div class="products_voucher_sendOrder">
+<div class="div_products">
+<div class="products" th:each="p: ${cart_products}">
+
+    <img class="photos" th:src="'/'+${p.photo}" src=""/>
+    <p th:text="'Brand: '+${p.brand}"></p>
+    <p  th:text="'Model: '+${p.model}"></p>
+    <p  th:text="'Diagonala: '+${p.diagonal}"></p>
+    <p th:text="'Retea: '+${p.internet_speed}"></p>
+    <p  th:text="'Memorie RAM: '+${p.memory_RAM}"></p>
+    <p  th:text="'Baterie: '+${p.battery_capacity}"></p>
+    <p  th:text="'Camera: '+${p.main_camera}"></p>
+    <p  th:text="'Pret: '+${p.price}+' lei'"></p>
+    <p  th:text="'Cantitate: '+${p.quantity}"></p>
+
+    <form method="post" action="/remove-product">
+        <button id="button">Scoate acest produs</button>
+        <input type="number" name="product_id" th:value="${p.product_id}" hidden>
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+        <input type="number" name="cartId" th:value="${cartId}" hidden>
+    </form>
+</div>
+</div>
+
+<div id="voucher_and_sendOrder">
+<form>
+    <div>
+            <label id="voucher">Cod voucher: </label>
+            <input class="input_voucher" type="text" name="codVoucher">
+            <input type="button" id="myBtn" value="Aplică voucher">
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+    </div>
+
+    <input type="number" name="numberCartProducts" th:value="${numberCartProducts}" hidden>
+    <div>
+        <label class="final_price">Total: </label>
+        <span class="final_price" th:text="${pretTotal}" id="pretTotal"></span>
+
+        <input type="number" name="pretTotal" th:value="${pretTotal}" hidden/>
+        <span class="lei"> lei</span>
+    </div>
+
+</form>
+<div class="btns">
+<form method="post" action="/send-command">
+    <input type="text" name="cod_voucher" hidden>
+    <button class="btn_sendOrder" id="btn_sendOrder">Plasează comanda</button>
+    <input type="number" name="user_id" th:value="${user_id}" hidden>
+    <input type="number" step="any" name="pretTotal" th:value="${pretTotal}" hidden/>
+    <input type="number" step="any" name="pretTotalTransmis" id="pretTotalTransmis" th:value="${pretTotal}" hidden/>
+</form>
+    <form method="post" action="/back-to-dashboard">
+        <button class="btn_backMenu">Pagina principală</button>
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+    </form>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="http://localhost:3080/cart.js"></script>
+
+</body>
+
+</html>

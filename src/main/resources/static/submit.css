@@ -1,0 +1,54 @@
+body {
+background-image: url("/first_page.jpg");
+background-size: 100%;
+}
+
+h1{
+margin-left: 30%;
+margin-top: 5%;
+color: #CC0000;
+font-style: italic;
+font-size: 400%;
+font-weight: 200;
+}
+
+.form-group{
+color:	rgb(173,216,230);
+font-size: 90%;
+letter-spacing: 0.4px;
+}
+
+.login{
+background-color: rgb(119,136,153,0.6);
+margin-left: 5%;
+line-height: 2;
+padding: 9px;
+font-size: 160%;
+position: absolute;
+width: 650px;
+margin-top: 10%;
+border-radius: 25px;
+}
+
+.form-control{
+margin-left: 10%;
+height: 25px;
+width: 300px;
+}
+
+.btn-primary{
+margin-left: 60%;
+border-radius: 8px;
+width: 120px;
+height: 40px;
+font-style: bold;
+color: 	rgb(70,130,180);
+font-size: 80%;
+
+}
+
+.register{
+margin-left: 3%;
+color:	rgb(173,216,230);
+
+}

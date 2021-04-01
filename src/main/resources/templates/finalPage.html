@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WiseCell | Order sent</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3080/finalPage.css"/>
+
+</head>
+<body>
+<h1>Comanda a fost finalizată cu succes!</h1>
+<div class="btns">
+<div>
+<form method="post" action="/sign-out">
+    <button class="btn_signOut">Ieșire</button>
+    <input type="number" name="user_id" th:value="${user_id}" hidden>
+
+</form>
+</div>
+<div>
+    <form method="post" action="/back-to-dashboard">
+        <button class="btn_backMenu">Pagina principală</button>
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+    </form>
+</div>
+</div>
+
+</body>
+</html>

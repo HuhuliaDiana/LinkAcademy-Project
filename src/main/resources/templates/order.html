@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WiseCell | Order</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3080/order.css"/>
+
+</head>
+<body>
+<div class="logo_btns">
+    <h1 class="logo">WiseCell</h1>
+    <form method="post" action="/sign-out">
+        <button class="btns">Ieșire</button>
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+    </form>
+</div>
+
+<form method="post" action="/finish-order">
+    <input type="number" name="cartId"  th:value="${cartId}" hidden>
+
+
+<div class="form_sendOrder">
+<div class="form">
+    <div class="form_group_control">
+        <label class="form-group" for="lastname">Nume: </label>
+        <input type="text" name="lastname" class="form-control" id="lastname" th:value="${lastname}" required>
+    </div>
+    <div class="form_group_control">
+        <label class="form-group" for="firstname">Prenume: </label>
+        <input type="text" name="firstname" class="form-control" id="firstname" th:value="${firstname}" required>
+    </div>
+    <div class="form_group_control">
+        <label class="form-group" for="phone">Telefon: </label>
+        <input type="tel" id="phone" name="phone" class="form-control" pattern="[0-9]{10}" required>
+    </div>
+    <div class="form_group_control">
+        <label class="form-group" for="address">Adresa: </label>
+        <input type="text" name="address" class="form-control" id="address" required>
+    </div>
+    <div class="form_group_control">
+        <label class="form-group" for="town">Oraș: </label>
+        <input type="text" name="town" class="form-control" id="town" required>
+    </div>
+    <div class="form_group_control">
+        <label class="form-group" for="county">Județ: </label>
+        <input type="text" name="county" class="form-control" id="county" required>
+    </div>
+</div>
+
+
+<!--    calcul pret final-->
+<div class="send_order">
+    <div>
+        <label class="elements_send_order">Subtotal: </label>
+        <span class="elements_send_order" th:text="${pretTotalTransmis}" id="pretTotalTransmis"></span>
+        <span class="lei"> lei</span>
+        <input type="number" name="pretTotalTransmis" th:value="${pretTotalTransmis}" hidden/>
+    </div>
+    <div>
+        <label class="elements_send_order">Cost de livrare: </label>
+        <span class="elements_send_order" th:text="${costLivrare}" id="costLivrare"></span>
+        <input type="number" name="costLivrare" th:value="${costLivrare}" hidden/>
+        <span class="lei"> lei</span>
+
+    </div>
+    <div>
+        <label class="elements_send_order">Total: </label>
+        <span class="elements_send_order" th:text="${pretFinal}" id="pretFinal"></span>
+        <input type="number" name="pretFinal" th:value="${pretFinal}" hidden/>
+        <span class="lei"> lei</span>
+
+    </div>
+    <div>
+        <button type="submit" class="btn-finish-order">Trimite comanda</button>
+    </div>
+    <div>
+    <form method="post" action="/back-to-dashboard">
+        <button class="btn_backMenu">Pagina principală</button>
+        <input type="number" name="user_id" th:value="${user_id}" hidden>
+    </form>
+    </div>
+
+    <input type="number" name="user_id" th:value="${user_id}" hidden>
+</div>
+</div>
+</form>
+
+</body>
+</html>

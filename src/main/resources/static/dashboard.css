@@ -1,0 +1,143 @@
+body {
+background-image: url("/blue.jpg");
+background-size: 100%;
+}
+
+.filters{
+display: flex;
+}
+
+.btns_seeCartSignOut{
+display: table-cell;
+display: flex;
+float: right;
+}
+
+.btns{
+border-radius: 8px;
+background-color: rgb(176,196,222);
+width: 150px;
+height: 50px;
+color: rgb(0,0,139);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 150%;
+margin-right: 30px;
+border: 2px solid rgb(176,224,230);
+
+}
+
+#button{
+backgound-color: rgb(255,228,181);
+}
+
+.logo_btns{
+width: 90%;
+display: table;
+margin-top: 40px;
+margin-left: 10%;
+}
+
+.logo{
+display: table-cell;
+color: rgb(173,216,230);
+font-style: italic;
+font-size: 400%;
+font-weight: 300;
+
+}
+
+.formChoice{
+border: 2px solid rgb(119,136,153);
+margin-right: 30px;
+background-color: rgb(192,192,192);
+width: 120px;
+height: 30px;
+color:	rgb(0,0,128);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 100%;
+border-radius: 8px;
+
+}
+
+.filters{
+margin-top: 60px;
+justify-content: center;
+}
+
+.btns_filters{
+margin-right: 10px;
+background-color: rgb(173,216,230);
+height: 32px;
+font-size: 100%;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+color: rgb(25,25,112);
+}
+
+.div_products{
+margin-top: 50px;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+}
+
+.products{
+margin-right: 70px;
+margin-top: 50px;
+width: 400px;
+height: 790px;
+border-radius: 10px;
+justify-content: center;
+border: 2px solid rgb(176,224,230);
+
+}
+
+.prod_dispon{
+text-align: center;
+}
+
+#button{
+margin-top: 10px;
+margin-left: 140px;
+width: 120px;
+height: 30px;
+background-color: rgb(255,218,185);
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+color: rgb(25,25,112);
+}
+
+.photos{
+width: 300px;
+height: 350px;
+margin-left: 50px;
+margin-top: 50px;
+}
+
+p{
+margin-left: 50px;
+color: 	rgb(173,216,230);
+}
+#btn_cart{
+width: 250px;
+}
+
+#formChoicePrice{
+width: 170px;
+}
+#formChoiceMemRAM{
+width: 140px;
+}
+#numberCartProducts{
+display: none;
+}
+
+.input_filters{
+color: rgb(173,216,230);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 120%;
+
+}
+
+#div_input_filters{
+margin-left: 10%;
+margin-top: 30px;
+}

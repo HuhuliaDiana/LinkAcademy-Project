@@ -1,0 +1,147 @@
+body {
+background-image: url("/blue.jpg");
+background-size: 100%;
+}
+
+.btn_signOut{
+border-radius: 8px;
+background-color: rgb(176,196,222);
+width: 150px;
+height: 50px;
+color: rgb(0,0,139);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 150%;
+border: 2px solid rgb(176,224,230);
+margin-right: 30px;
+display: table-cell;
+float: right;
+text-align: center;
+
+
+}
+
+.logo_btns{
+width: 90%;
+display: table;
+margin-top: 40px;
+margin-left: 10%;
+}
+
+.logo{
+display: table-cell;
+color: rgb(173,216,230);
+font-style: italic;
+font-size: 400%;
+font-weight: 300;
+
+}
+
+.div_products{
+margin-top: 50px;
+margin-left: 15%;
+
+
+}
+
+.products{
+margin-right: 70px;
+margin-top: 50px;
+width: 400px;
+height: 800px;
+border-radius: 10px;
+justify-content: center;
+border: 2px solid rgb(176,224,230);
+
+}
+
+.prod_dispon{
+text-align: center;
+}
+
+#button{
+margin-top: 10px;
+margin-left: 125px;
+width: 150px;
+height: 30px;
+background-color: rgb(255,218,185);
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+color: rgb(25,25,112);
+
+}
+
+.photos{
+width: 300px;
+height: 350px;
+margin-left: 50px;
+margin-top: 50px;
+}
+
+p{
+margin-left: 50px;
+color: 	rgb(173,216,230);
+}
+
+#voucher_and_sendOrder{
+float: right;
+margin-top: 100px;
+margin-right: 15%;
+
+}
+
+.products_voucher_sendOrder{
+display: flex;
+justify-content: space-between;
+
+}
+
+.btn_sendOrder, .btn_backMenu, #myBtn{
+margin-top: 20px;
+font-size: 100%;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+color: rgb(25,25,112);
+border-radius: 8px;
+background-color: rgb(173,216,230);
+
+}
+
+
+.btn_backMenu{
+background-color: #FAEBD7;
+float: right;
+width: 100%;
+height: 30px;
+}
+
+.btn_sendOrder{
+height: 30px;
+border: 2px solid rgb(30,144,255);
+width: 100%;
+}
+
+
+
+#voucher, .final_price{
+color: rgb(173,216,230);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+
+#voucher{
+font-size: 130%;
+}
+
+.final_price{
+font-size: 200%;
+}
+
+.input_voucher{
+border-radius: 8px;
+border: 2px solid rgb(176,224,230);
+
+}
+
+.lei{
+color: rgb(173,216,230);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 200%;
+}
